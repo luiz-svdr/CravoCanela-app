@@ -1,0 +1,86 @@
+﻿<Window x:Class="CravoCanela_app.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:local="clr-namespace:CravoCanela_app.Helper"        
+        mc:Ignorable="d"
+        x:Name="CravoCanelaGabriela"        
+        Title="CravoCanelaGabriela" Height="700" Width="1350"
+        MinWidth="428"
+        MinHeight="700"
+        MaxWidth="1350"
+        MaxHeight="700"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent">
+        <!--xmlns:vm="clr-namespace:CravoCanela_app.ViewModel"-->
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DataTemplate.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+
+    <!--<Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>-->
+            
+    <Grid>
+
+        <Border Background="Transparent" 
+                BorderBrush="Transparent"                
+                CornerRadius="8,8,8,8"/>
+        
+
+
+        <!--Responsive Layouts-->
+
+        <ContentControl Content="{Binding}">
+            
+            <ContentControl.Style>
+                
+                <Style TargetType="ContentControl">
+
+                    <!--Default Layout-->
+
+                    <Setter Property="ContentTemplate"
+                            Value="{StaticResource Desktop_Layout}" />
+
+                    <Style.Triggers>
+
+                        <DataTrigger Binding="{Binding Path=ActualWidth, RelativeSource={RelativeSource AncestorType=Window}, Converter={x:Static local:IsGreaterThanConverter.Instance}, ConverterParameter=1400}"
+                                 Value="True">
+
+                            <Setter Property="ContentTemplate"
+                            Value="{StaticResource Desktop_Layout}" />
+                            
+                        </DataTrigger>
+                        
+                    </Style.Triggers>
+                    
+
+                </Style>
+                
+            </ContentControl.Style>
+            
+        </ContentControl>        
+            
+            <!--Close App Button-->
+
+            <!--<Button Command="{Binding CloseAppComand}"
+                    CommandParameter="{Binding ElementName=CravoCanelaGabriela}"
+                    Style="{StaticResource CloseAppStyle}"/>-->
+
+        
+        
+
+    </Grid>
+</Window>
