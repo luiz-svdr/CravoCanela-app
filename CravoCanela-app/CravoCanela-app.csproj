@@ -90,6 +90,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\Montserrat\Montserrat-VariableFont_wght.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,6 +104,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\logoHome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\logoPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\FaleConosco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\boderHome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Brigadeiro_DesktopLayout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Bolo_DesktopLayout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\AboutProfilePIC.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
