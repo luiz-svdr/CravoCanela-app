@@ -5,27 +5,23 @@ using System.Windows.Data;
 
 namespace CravoCanela_app.Helper
 {
-    //IsLessThanConverter
-
-    public class IssLessThanConverter : IValueConverter
-
+    // IsLessThanConverter //
+    public class IsLessThanConverter : IValueConverter
     {
-        public static readonly IValueConverter Instace = new IssLessThanConverter();
-        
-        public object Convert (object value, Type targetType, object parameter, CultureInfo culture)
+        public static readonly IValueConverter Instance = new IsLessThanConverter();
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            double doubleValue = System.Convert.ToDouble (value);
-            double compareToValue = System.Convert.ToDouble (parameter);
+            double doubleValue = System.Convert.ToDouble(value);
+            double compareToValue = System.Convert.ToDouble(parameter);
 
             return doubleValue < compareToValue;
         }
-              
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();
         }
-
     }
 
     // IsGreaterThanConverter //
@@ -45,7 +41,5 @@ namespace CravoCanela_app.Helper
         {
             throw new NotImplementedException();
         }
-
     }
-
 }

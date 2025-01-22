@@ -1,7 +1,7 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
-    <!--Desktop Layout-->    
+
+    <!--Desktop Layout-->
     <DataTemplate x:Key="Desktop_Layout">
 
         <!--#region DesktopLayout_definition-->
@@ -15,9 +15,8 @@
 
             <Grid Grid.Row="0" Grid.RowSpan="2">
                 <Border BorderBrush="#B66E79"                    
-           BorderThickness="2"
-           Margin="8"
-           CornerRadius="8,8,8,8">
+                        BorderThickness="2"                        
+                        CornerRadius="8,8,8,8">
 
                     <Border.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -26,28 +25,9 @@
                         </LinearGradientBrush>
                     </Border.Background>
 
-                    <TextBlock Text="CRAVO CANELA GABRIELA"
-                     Foreground="#5e4245"
-                     FontFamily="pack://application:,,,/Fonts/#Montserrat-VariableFont_wght.ttf"
-                     FontSize="40"
-                     FontWeight="Bold"
-                     HorizontalAlignment="Center" Margin="0,40,0,578"/>
-                </Border>
-                <TextBlock Text="CRAVO CANELA GABRIELA"
-                      Foreground="White"
-                      FontFamily="pack://application:,,,/Fonts/#Montserrat-VariableFont_wght.ttf"
-                      FontSize="40"
-                      FontWeight="Bold"
-                      Margin="258,47,-258,571"/>
-            </Grid>
-
-            <Grid Grid.Row="0">
-                <Image Source="Assets/logoHome.png"
-          HorizontalAlignment="Left"
-          Margin="-80,-84,0,0"
-          VerticalAlignment="Top"
-          Stretch="None"/>
-            </Grid>
+                </Border>          
+                
+            </Grid>           
 
             <!--#region SAC-->
 
@@ -67,23 +47,23 @@
 
             <Grid Grid.Row="1">
                 <Image Source="Assets/boderHome.png"
-          HorizontalAlignment="Left"
-          VerticalAlignment="Top"
-          Stretch="None"/>
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"
+                       Stretch="None"/>
             </Grid>
             <Grid Grid.Row="1">
                 <Image Source="Assets/boderHome.png"
-          HorizontalAlignment="Center"
-          VerticalAlignment="Top"
-          Stretch="None"/>
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Stretch="None"/>
             </Grid>
             <Grid Grid.Row="1">
                 <Image Source="Assets/boderHome.png"
-         HorizontalAlignment="Right"
-         VerticalAlignment="Top"
-         Stretch="None"/>
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top"
+                       Stretch="None"/>
 
-            <!--#region about-->
+                <!--#region about-->
 
                 <TextBlock Text="Sobre a Empresa"
              FontFamily="pack://application:,,,/Fonts/#Montserrat-VariableFont_wght.ttf"
@@ -118,6 +98,19 @@
 
             <!--#region images-->
 
+            <Grid Grid.Row="0">
+                <Image Source="Assets/GabrielaCravoCanela_desktopLayout.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Stretch="None" Height="60" Width="550" Margin="0,45,0,0"/>
+            </Grid>
+            <Grid Grid.Row="0">
+                <Image Source="Assets/logoHome.png"
+             HorizontalAlignment="Left"
+             Margin="-80,-84,0,0"
+             VerticalAlignment="Top"
+             Stretch="None"/>
+            </Grid>
             <Grid Grid.Row="1">
                 <Image Source="Assets/Brigadeiro_DesktopLayout.png"
                  HorizontalAlignment="Right"
@@ -155,9 +148,310 @@
                     </Image.RenderTransform>
                 </Image>
             </Grid>
+            
 
         </Grid>
 
     </DataTemplate>
-    
+
+    <!--#region Layout_975px-->
+    <DataTemplate x:Key="Layout_975px">
+
+        <Grid x:Name="baseGrid">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="500"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.RowSpan="2">
+                <Border BorderBrush="#B66E79"                    
+                        BorderThickness="2"                        
+                        CornerRadius="8,8,8,8">
+
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#B66E79" Offset="0.15"/>
+                            <GradientStop Color="#86323F" Offset="0.15"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                </Border>
+
+            </Grid>
+
+            <!--#region SAC-->
+
+            <Grid Grid.Row="1">
+                <Image Source="Assets/FaleConosco975px.png"                    
+                 Margin="750,378,77,35"                    
+                 Stretch="None">
+                    <Image.Effect>
+                        <DropShadowEffect/>
+                    </Image.Effect>
+                </Image>
+            </Grid>
+
+            <!--#region borders-->
+
+            <Grid Grid.Row="1">
+                <Image Source="Assets/boderHome.png"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top"
+              Stretch="None"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="Assets/boderHome.png"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Top"
+              Stretch="None"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="Assets/boderHome.png"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Stretch="None"/>
+
+                <!--#region about-->
+
+                <TextBlock Text="Sobre a Empresa"
+                     FontFamily="pack://application:,,,/Fonts/#Montserrat-VariableFont_wght.ttf"
+                     FontSize="23"
+                     Height="30"
+                     FontWeight="SemiBold"
+                     Foreground="White"
+                     HorizontalAlignment="Center"              
+                     VerticalAlignment="Top"
+                     Margin="0,250,0,0"/>
+
+                <TextBlock Text="Sobre Bolos"
+                     FontFamily="pack://application:,,,/Fonts/#Montserrat-VariableFont_wght.ttf"
+                     FontSize="23"
+                     Height="30"
+                     FontWeight="SemiBold"
+                     Foreground="White"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Margin="115,250,0,0"/>
+
+                <TextBlock Text="Sobre Brigadeiros"
+                     FontFamily="pack://application:,,,/Fonts/#Montserrat-VariableFont_wght.ttf"
+                     FontSize="23"
+                     Height="30"               
+                     FontWeight="SemiBold"
+                     Foreground="White"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Top"
+                     Margin="0,250,87,0"/>
+            </Grid>
+
+            <!--#region images-->
+
+            <Grid Grid.Row="0">
+                <Image Source="Assets/GabrielaCravoCanela_desktopLayout.png"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Top"
+                 Stretch="None" Height="60" Width="550" Margin="20,45,0,0"/>
+            </Grid>
+            <Grid Grid.Row="0">
+                <Image Source="Assets/logoHome.png"
+                 HorizontalAlignment="Left"
+                 Margin="-80,-84,0,0"
+                 VerticalAlignment="Top"
+                 Stretch="None"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="Assets/Brigadeiro_DesktopLayout.png"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Top"
+                 Stretch="None" Height="170" Width="178" Margin="0,70,92,0">
+                </Image>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="Assets/Bolo_DesktopLayout.png"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Stretch="None" Height="208" Width="204" Margin="70,45,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="Assets/AboutProfilePIC.png"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Top"
+                 Stretch="None" Height="202" Width="206" Margin="0,45,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.9" ScaleY="0.9"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Grid>
+
+
+        </Grid>
+
+    </DataTemplate>
+
+    <!--#region Layout_920px-->
+    <DataTemplate x:Key="Layout_920px">
+
+        <Grid x:Name="baseGrid">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="500"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.RowSpan="2">
+                <Border BorderBrush="#B66E79"                    
+                    BorderThickness="2"                        
+                    CornerRadius="8,8,8,8">
+
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#B66E79" Offset="0.15"/>
+                            <GradientStop Color="#86323F" Offset="0.15"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                </Border>
+
+            </Grid>
+
+            <!--#region SAC-->
+
+            <Grid Grid.Row="1">
+                <Image Source="Assets/FaleConosco975px.png"                    
+                        Margin="40,378,77,35"
+                        HorizontalAlignment="Left"
+                        Stretch="None">
+                    <Image.Effect>
+                        <DropShadowEffect/>
+                    </Image.Effect>
+                </Image>
+            </Grid>
+
+            <!--#region borders-->
+
+            <Grid Grid.Row="1">
+                <Image Source="Assets/boderHome.png"
+          HorizontalAlignment="Left"
+          VerticalAlignment="Top"
+          Stretch="None"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="Assets/boderHome.png"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Top"
+          Stretch="None"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="Assets/boderHome.png"
+          HorizontalAlignment="Right"
+          VerticalAlignment="Top"
+          Stretch="None"/>
+
+                <!--#region about-->
+
+                <TextBlock Text="Sobre a Empresa"
+                 FontFamily="pack://application:,,,/Fonts/#Montserrat-VariableFont_wght.ttf"
+                 FontSize="23"
+                 Height="30"
+                 FontWeight="SemiBold"
+                 Foreground="White"
+                 HorizontalAlignment="Center"              
+                 VerticalAlignment="Top"
+                 Margin="0,250,0,0"/>
+
+                <TextBlock Text="Sobre Bolos"
+                 FontFamily="pack://application:,,,/Fonts/#Montserrat-VariableFont_wght.ttf"
+                 FontSize="23"
+                 Height="30"
+                 FontWeight="SemiBold"
+                 Foreground="White"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Margin="115,250,0,0"/>
+
+                <TextBlock Text="Sobre Brigadeiros"
+                 FontFamily="pack://application:,,,/Fonts/#Montserrat-VariableFont_wght.ttf"
+                 FontSize="23"
+                 Height="30"               
+                 FontWeight="SemiBold"
+                 Foreground="White"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Top"
+                 Margin="0,250,87,0"/>
+            </Grid>
+
+            <!--#region images-->
+
+            <Grid Grid.Row="0">
+                <Image Source="Assets/GabrielaCravoCanela_desktopLayout.png"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Top"
+             Stretch="None" Height="60" Width="550" Margin="140,45,0,0"/>
+            </Grid>
+            <Grid Grid.Row="0">
+                <Image Source="Assets/logoHome.png"
+             HorizontalAlignment="Left"
+             Margin="-80,-84,0,0"
+             VerticalAlignment="Top"
+             Stretch="None"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="Assets/Brigadeiro_DesktopLayout.png"
+             HorizontalAlignment="Right"
+             VerticalAlignment="Top"
+             Stretch="None" Height="170" Width="178" Margin="0,70,92,0">
+                </Image>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="Assets/Bolo_DesktopLayout.png"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Top"
+             Stretch="None" Height="208" Width="204" Margin="70,45,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="Assets/AboutProfilePIC.png"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Top"
+             Stretch="None" Height="202" Width="206" Margin="0,45,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.9" ScaleY="0.9"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Grid>
+
+
+        </Grid>
+
+    </DataTemplate>
+
+
 </ResourceDictionary>

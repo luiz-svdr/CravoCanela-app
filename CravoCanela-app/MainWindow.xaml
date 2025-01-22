@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         x:Name="CravoCanelaGabriela"        
         Title="CravoCanelaGabriela" Height="700" Width="1024"
-        MinWidth="428"
+        MinWidth="820"
         MinHeight="700"
         MaxWidth="1024"
         MaxHeight="700"
@@ -16,7 +16,7 @@
         ResizeMode="CanResizeWithGrip"
         WindowStartupLocation="CenterScreen"
         Background="Transparent">
-        <!--xmlns:vm="clr-namespace:CravoCanela_app.ViewModel"-->
+    <!--xmlns:vm="clr-namespace:CravoCanela_app.ViewModel"-->
 
     <Window.Resources>
         <ResourceDictionary>
@@ -32,21 +32,21 @@
     <!--<Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>-->
-            
+
     <Grid>
 
         <Border Background="Transparent" 
                 BorderBrush="Transparent"                
                 CornerRadius="8,8,8,8"/>
-        
+
 
 
         <!--Responsive Layouts-->
 
         <ContentControl Content="{Binding}">
-            
+
             <ContentControl.Style>
-                
+
                 <Style TargetType="ContentControl">
 
                     <!--Default Layout-->
@@ -56,31 +56,51 @@
 
                     <Style.Triggers>
 
-                        <DataTrigger Binding="{Binding Path=ActualWidth, RelativeSource={RelativeSource AncestorType=Window}, Converter={x:Static local:IsGreaterThanConverter.Instance}, ConverterParameter=1400}"
+                        <DataTrigger Binding="{Binding Path=ActualWidth, RelativeSource={RelativeSource AncestorType=Window}, Converter={x:Static local:IsGreaterThanConverter.Instance}, ConverterParameter=1024}"
                                  Value="True">
 
                             <Setter Property="ContentTemplate"
                             Value="{StaticResource Desktop_Layout}" />
-                            
+
                         </DataTrigger>
-                        
+
+                        <!--// Layout // {width < 975px}-->
+
+                        <DataTrigger Binding="{Binding Path=ActualWidth, RelativeSource={RelativeSource AncestorType=Window}, Converter={x:Static local:IsLessThanConverter.Instance}, ConverterParameter=975}"
+                                     Value="True">
+
+                            <Setter Property="ContentTemplate"
+                                    Value="{StaticResource Layout_975px}" />
+
+                        </DataTrigger>
+
+                        <!--// Layout // {width < 800px}-->
+
+                        <DataTrigger Binding="{Binding Path=ActualWidth, RelativeSource={RelativeSource AncestorType=Window}, Converter={x:Static local:IsLessThanConverter.Instance}, ConverterParameter=920}"
+                                     Value="True">
+
+                            <Setter Property="ContentTemplate"
+                                    Value="{StaticResource Layout_920px}" />
+
+                        </DataTrigger>
+
                     </Style.Triggers>
-                    
+
 
                 </Style>
-                
-            </ContentControl.Style>
-            
-        </ContentControl>        
-            
-            <!--Close App Button-->
 
-            <!--<Button Command="{Binding CloseAppComand}"
+            </ContentControl.Style>
+
+        </ContentControl>
+
+        <!--Close App Button-->
+
+        <!--<Button Command="{Binding CloseAppComand}"
                     CommandParameter="{Binding ElementName=CravoCanelaGabriela}"
                     Style="{StaticResource CloseAppStyle}"/>-->
 
-        
-        
+
+
 
     </Grid>
 </Window>

@@ -123,5 +123,11 @@
   <ItemGroup>
     <Resource Include="Assets\AboutProfilePIC.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\GabrielaCravoCanela_desktopLayout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\FaleConosco975px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
